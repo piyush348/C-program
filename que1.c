@@ -1,14 +1,19 @@
 #include <stdio.h>
 #include <conio.h>
-void main()
+int main()
 {
-    int m1, m2, m3, m4, m5;
-    float sum, percentage;
-    printf("Enter the marks: \n");
-    scanf("%d%d%d%d%d", &m1, &m2, &m3, &m4, &m5);
-    sum = m1 + m2 + m3 + m4 + m5;
-    printf("sum=%f \n", sum);
-    percentage = (sum / 500) * 100;
-    printf("percentage =%f", percentage);
-    getch();
+    int a, b;
+    printf("Enter a = ");
+    scanf("%d", &a);
+    printf("Enter b = ");
+    scanf("%d", &b);
+    if (a == b)
+    {
+        printf("Both the numbers are equall");
+    }
+    else
+    {
+        printf("Both are not equall");
+    }
+    return 0;
 }
