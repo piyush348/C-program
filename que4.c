@@ -2,14 +2,16 @@
 #include <conio.h>
 int main()
 {
-    int A, r, TC, C;
-    printf("Enter the radius :");
-    scanf("%d", &r);
-    printf("Cost sq/m:");
-    scanf("%d", &C);
-    A = 2 * 22 / 7 * r;
-    printf("\nA=%d", A);
-    TC = 25 * A;
-    printf("\nTC=%d", TC);
+    int y;
+    printf("Enter the year :");
+    scanf("%d", &y);
+    if (y % 4 == 0)
+    {
+        printf("The year is leap year");
+    }
+    else
+    {
+        printf("Not a leap year");
+    }
     return 0;
 }
