@@ -2,19 +2,30 @@
 #include <conio.h>
 int main()
 {
-
-    int m1, m2, m3, m4, Avg;
-    printf("Enter the marks of the students:\n");
-    scanf("%d%d%d%d", &m1, &m2, &m3, &m4);
-    Avg = (m1 + m2 + m3 + m4) / 4;
-    printf("Avg=%d", Avg);
-    if (Avg < 50)
+    int age;
+    printf("Enter the age of a person :");
+    scanf("%d", &age);
+    if (age >= 0 && age <= 15)
     {
-        printf("\nStudent Is Fail");
+        printf("Working hour is 0");
     }
     else
     {
-        printf("\nStudent is pass");
+        if (age >= 16 && age <= 20)
+        {
+            printf("Working hour is 3");
+        }
+        else
+        {
+            if (age >= 21 && age <= 25)
+            {
+                printf("Working hour is 6");
+            }
+            else
+            {
+                printf("Working hour is 8");
+            }
+        }
     }
     return 0;
 }
