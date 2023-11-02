@@ -2,27 +2,29 @@
 #include <conio.h>
 int main()
 {
-    float a, b, c;
-    printf("Enter a :");
-    scanf("%f", &a);
-    printf("Enter b :");
-    scanf("%f", &b);
-    printf("Enter c :");
-    scanf("%f", &c);
-    if (a > b)
+    int color;
+    printf("Enter the number from 1 to 5 :");
+    scanf("%d", &color);
+    switch (color)
     {
-        if (a > c)
-        {
-            printf("a is the greatest number");
-        }
+    case 1:
+        printf("RED");
+        break;
+    case 2:
+        printf("GREEN");
+        break;
+    case 3:
+        printf("WHITE");
+        break;
+    case 4:
+        printf("YELLOW");
+        break;
+    case 5:
+        printf("ORANGE");
+        break;
+
+    default:
+        printf("Invalid input");
+        break;
     }
-    else if (b > a && b > c)
-    {
-        printf("b is greatest number");
-    }
-    else
-    {
-        printf("c is the greatest number");
-    }
-    return 0;
 }
