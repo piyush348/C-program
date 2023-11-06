@@ -2,34 +2,19 @@
 #include <conio.h>
 int main()
 {
-    int day = 2;
-    printf("The day with number %d is ", day);
-    switch (day)
+    int i, n, odd_sum = 0, even_sum = 0;
+    printf("Enter the last number : ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
     {
-    case 1:
-        printf("Monday");
-        break;
-    case 2:
-        printf("Tuesday");
-        break;
-    case 3:
-        printf("Wednesday");
-        break;
-    case 4:
-        printf("Thursday");
-        break;
-    case 5:
-        printf("Friday");
-        break;
-    case 6:
-        printf("Saturday");
-        break;
-    case 7:
-        printf("Sunday");
-        break;
-    default:
-        printf("Invalid Input");
-        break;
+        if (i % 2 == 0)
+
+            even_sum = even_sum + i;
+        else
+            odd_sum = odd_sum + i;
     }
+    printf("Sum of all even number =%d\n", even_sum);
+    printf("Sum of all odd number =%d", odd_sum);
+
     return 0;
 }
