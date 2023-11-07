@@ -2,30 +2,16 @@
 #include <conio.h>
 int main()
 {
-    int age;
-    printf("Enter the age of a person :");
-    scanf("%d", &age);
-    if (age >= 0 && age <= 15)
+    int one = 0, two = 1;
+    int n, i, current;
+    printf("Enter the value of n:");
+    scanf("%d", &n);
+    for (i = 2; i <= n; i++)
     {
-        printf("Working hour is 0");
-    }
-    else
-    {
-        if (age >= 16 && age <= 20)
-        {
-            printf("Working hour is 3");
-        }
-        else
-        {
-            if (age >= 21 && age <= 25)
-            {
-                printf("Working hour is 6");
-            }
-            else
-            {
-                printf("Working hour is 8");
-            }
-        }
+        current = one + two;
+        one = two;
+        two = current;
+        printf("%d  ", current);
     }
     return 0;
 }
