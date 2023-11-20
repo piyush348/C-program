@@ -2,13 +2,17 @@
 #include <conio.h>
 int main()
 {
-    int a, b;
-    printf("Enter two numbers:");
-    scanf("%d%d", &a, &b);
-    printf("Enter the number before swapping First number=%d\nSecond number=%d\n", a, b);
-    a = a + b;
-    b = a - b;
-    a = a - b;
-    printf("Enter the number after swapping First number=%d\nSecond number=%d\n", a, b);
+    int n, rem;
+    int sum = 0;
+    printf("Enter the value of n :");
+    scanf("%d", &n);
+    while (n > 0)
+    {
+        rem = n % 10;
+        sum += rem;
+        n = n / 10;
+    }
+    printf("%d", sum);
+
     return 0;
 }
