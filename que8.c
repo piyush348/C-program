@@ -1,17 +1,18 @@
 #include <stdio.h>
-
-#include <math.h>
+#include <conio.h>
 int main()
 {
-    float a, b, c, s, Area;
-    printf("Enter a :");
-    scanf("%f", &a);
-    printf("Enter b :");
-    scanf("%f", &b);
-    printf("Enter c :");
-    scanf("%f", &c);
-    s = a + b + c / 2;
-    Area = sqrt(s * (s - a) * (s - b) * (s - c));
-    printf("Area of triangle=%.2f", Area);
+    int n, rem;
+    int value = 0;
+    printf("Enter the value :");
+    scanf("%d", &n);
+    while (n > 0)
+    {
+        rem = n % 10;
+        value = value * 10 + rem;
+        n = n / 10;
+    }
+    printf("Enter the value :%d", value);
+
     return 0;
 }
