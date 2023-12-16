@@ -2,12 +2,24 @@
 #include <conio.h>
 int main()
 {
-    int N, i;
-    printf("Enter the number:");
-    scanf("%d", &N);
-    for (i = 1; i <= N; i++)
+    int a[3][3], i, j;
+    printf(" Enter the elements of the matrix :");
+    for (i = 0; i < 3; i++)
     {
-        printf("%d\n", i);
+        for (j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
     }
+    printf("\n The entered matrix is : \n");
+    for (i = 0; i < 3; i++)
+    {
+        printf("\n");
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d\t", a[i][j]);
+        }
+    }
+
     return 0;
 }
