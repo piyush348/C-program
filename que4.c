@@ -2,19 +2,41 @@
 #include <conio.h>
 int main()
 {
-    int i, n, odd_sum = 0, even_sum = 0;
-    printf("Enter the last number : ");
-    scanf("%d", &n);
-    for (i = 1; i <= n; i++)
+    int i, j, a[3][3], b[3][3];
+
+    printf("Enter a 3x3 matrix :\n");
+    for (i = 0; i < 3; i++)
     {
-        if (i % 2 == 0)
-
-            even_sum = even_sum + i;
-        else
-            odd_sum = odd_sum + i;
+        for (j = 0; j < 3; j++)
+        {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
     }
-    printf("Sum of all even number =%d\n", even_sum);
-    printf("Sum of all odd number =%d", odd_sum);
-
+    printf("\n The entered matrix is : \n");
+    for (i = 0; i < 3; i++)
+    {
+        printf("\n");
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d\t", a[i][j]);
+        }
+    }
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            b[i][j] = a[j][i];
+        }
+    }
+    printf("\n \n The transpose of a matrix is : \n");
+    for (i = 0; i < 3; i++)
+    {
+        printf("\n");
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d\t", b[i][j]);
+        }
+    }
     return 0;
 }
