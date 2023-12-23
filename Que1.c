@@ -1,19 +1,25 @@
 #include <stdio.h>
 #include <conio.h>
-int main()
+void swap(int a, int b)
 {
-    int a[1000], i, n, sum = 0;
-    printf("Enter the size of array : ");
-    scanf("%d", &n);
-    printf("Enter the elements of the array :");
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
-    for (i = 0; i < n; i++)
-    {
-        sum += a[i];
-    }
-    printf("Sum of the array is : %d", sum);
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping first number is %d and 2nd number is %d", a, b);
+}
+
+int main(void)
+{
+    int first, second;
+    printf("Enter the first value:");
+    scanf("%d", &first);
+    printf("Enter the second value:");
+    scanf("%d", &second);
+
+    swap(first, second);
+
+    printf("\n After swap function is called 1st number is %d and 2nd number is %d", first, second);
+
     return 0;
 }
